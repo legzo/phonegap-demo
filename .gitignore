@@ -18,3 +18,4 @@ local.properties
 
 .classpath
 .project
+assets/www/phonegap.js
