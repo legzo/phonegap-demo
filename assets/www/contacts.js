@@ -11,7 +11,7 @@ function fetchContacts() {
 	
 	$('#fetchContacts').hide();
 	$('#loading').show();
-	$("#msg").text('so many friends...');
+	$("#msg").text("tellement d'amis...");
 	
 	var fields = [ "displayname", "phoneNumbers" ];
 	navigator.contacts.find(fields, onSuccess, onError);
