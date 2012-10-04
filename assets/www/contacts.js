@@ -28,7 +28,7 @@ function onSuccess(contacts) {
 			&& contact.phoneNumbers 
 			&& contact.phoneNumbers.length > 0) {
 			
-			$("#list").append("<li>" + contact.displayName + " (" + anonymize(contact.phoneNumbers[0].value) + ")" +"</li>");
+			$("#list").append("<li>" + anonymize(contact.displayName) + " (" + anonymize(contact.phoneNumbers[0].value) + ")" +"</li>");
 		}
 	}
 };
@@ -38,5 +38,5 @@ function onError(contactError) {
 };
 
 function anonymize(phoneNumber) {
-	return phoneNumber.replace(/[0-9]{3}$/, "xxx");
+	return phoneNumber.replace(/.{3}$/, "xxx");
 }
